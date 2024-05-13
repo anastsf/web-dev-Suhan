@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<head>
+    <title>Holy Grail Layout in CSS</title>
+    <style>
+        img {
+            float: right;
+            max-width: 400px;
+            margin-left: 20px;
+        }
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        header, footer {
+            background-color: #f8f9fa;
+            padding: 10px 0;
+            text-align: center;
+        }
+        
+        .toc { 
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .toc li {
+            padding: 0 10px;
+        }
+        
+        .toc a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        
+        .toc a:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+
+<body id="top">
+
+<header>
+    <nav>
+        <ul class="toc">
+            <li><a href="#box_model">Box Model</a></li>
+            <li><a href="#clearfix">Clearfix Hack</a></li>
+            <li><a href="#margin_collapse">Margin Collapse</a></li>
+            <li><a href="#holy_grail_issues">Holy Grail Issues</a></li>
+            <li><a href="#modern_holy_grail">Modern Holy Grail</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <article>
+        <h1>Holy Grail Layout in CSS</h1>
+        
+        <section>
+            <h2>What is a box model in CSS. Give box-sizing property definition </h2>
+            <p>The CSS box model represents the design and layout of each HTML element. It includes the content itself, padding around the content, a border surrounding the padding, and the margin outside the border. The <code>box-sizing</code> property defines how the width and height of the box are calculated.</p>
+            <img src="1.png" alt="CSS Box Model">
+        </section>
+
+        <section>
+            <h2>What is a “clearfix hack” and when does it need to be applied </h2>
+            <p>The 'clearfix hack' is a CSS technique used to prevent the parent container from collapsing when it has floated child elements. Without clearfix, the parent would not wrap the floated children and would appear as if it has no height.</p>
+            <img src="2.png" alt="Before Clearfix">
+            <img src="3.png" alt="After Clearfix" class="clearfix">
+        </section>
+
+        <section>
+            <h2>What is a “margin collapse” and what are the use cases for margin: auto and negative margin values </h2>
+            <p>Margin collapse occurs when two vertical margins come in contact, and instead of combining, they collapse into one margin, which is the larger of the two. 'margin: auto' is used to center elements, and negative margins can be employed to overlap elements or adjust layout in non-standard ways.</p>
+            <img src="4.png" alt="Margin Collapse">
+        </section>
+
+        <section>
+            <h2>What was the problem with achieving Holy Grail layout </h2>
+            <p>Historically, the problem with the Holy Grail layout was creating a two-column layout with header and footer, where both sidebars and the main content stretch to the height of the tallest column. It was challenging with older layout methods like floats.</p>
+            <img src="5.png" alt="Holy Grail Layout Problem">
+        </section>
+
+        <section>
+            <h2>What are the modern ways to achieve Holy Grail layout </h2>
+            <p>Modern ways to achieve the Holy Grail layout include using Flexbox or CSS Grid, which provide more control over alignment, distribution of space, and sizing of boxes, without many of the hacks required in the past.</p>
+            <img src="6.png" alt="Modern Holy Grail Layout">
+        </section>
+        
+    </article>
+</main>
+<footer>
+    <p>Suhan Anastasia</p>
+    <p>IRM/Web design</p>
+    <p>Created on: May 13, 2024, Monday</p>
+    <p>Minsk</p>
+</footer>
+</body>
+</html>
