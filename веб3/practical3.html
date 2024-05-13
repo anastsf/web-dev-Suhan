@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Report</title>
+    <style>
+body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        article {
+            border: 3px solid #000;
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+        }
+        section {
+            border: 2px dashed #007bff;
+            margin: 15px;
+            padding: 15px;
+        }
+        h1, h2 {
+            border-bottom: 4px double #444;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        strong {
+            border: 2px groove #666;
+            padding: 2px 6px;
+            background-color: #e7e7e7;
+            margin-right: 5px;
+        }
+        em {
+            border: 1px inset #ddd;
+            padding: 2px 6px;
+            background-color: #e7e7e7;
+            margin-right: 5px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        img {
+            border: 5px outset #555;
+            margin: 10px 0;
+            display: block; 
+            max-width: 80%;
+        }
+        .bg-hex {
+            background-color: #f0f8ff; /* AliceBlue */
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Color name background */
+        .bg-colorname {
+            background-color: peachpuff;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* RGBA background */
+        .bg-rgba {
+            background-color: rgba(255, 99, 71, 0.5); /* Tomato color with 50% opacity */
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Gradient background */
+        .bg-gradient {
+            background: linear-gradient(45deg, #7b4397, #dc2430);
+            padding: 10px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        /* Repeating gradient background */
+        .bg-repeating-gradient {
+            background: repeating-linear-gradient(
+                45deg,
+                #606dbc,
+                #606dbc 10px,
+                #465298 10px,
+                #465298 20px
+            );
+            padding: 10px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        /* Image background */
+        .bg-image {
+            background-image: url('2.jpg'); 
+            background-size: cover;
+            padding: 10px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        /* Multiple images background */
+        .bg-multiple-images {
+            background-image: 
+                url('3.png'), /* A semitransparent PNG image */
+                url('2.jpg'); /* The bottom image */
+            background-size: cover, cover;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<main>
+    <article>
+        <section>
+  <h1>Web Development Insights</h1>
+        
+        <section>
+            <h2>Opening Developer Console</h2>
+            <p><strong>Mozilla Firefox:</strong> You can open the developer console in Mozilla Firefox by pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> on Windows or <kbd>Cmd</kbd> + <kbd>Option</kbd> + <kbd>K</kbd> on macOS. Alternatively, you can click on the menu button, select "Web Developer" and then "Web Console" or "Toggle Tools".</p>
+            <p><strong>Safari:</strong> To activate the developer console in Safari, first enable the Developer menu by going to Safari's Preferences, clicking on the Advanced tab, and selecting "Show Develop menu in menu bar" at the bottom. Then you can open the console by clicking on "Develop" in the menu bar and selecting "Show Web Inspector".</p>
+        </section>
+        
+        <section>
+            <h2>Internal Links: Absolute vs Relative</h2>
+            <p>When considering internal links, <em>relative links</em> are generally preferable as they are more portable and easier to maintain. For instance, if you move your site to a different domain, relative links will still work without changes. Relative links are essential when developing locally before publishing online.</p>
+            <p><em>Absolute links</em> specify the full URL and are useful when linking to external sites or when you need to ensure the link leads to a specific location regardless of the context, such as in an email or a PDF document.</p>
+        </section>
+        
+        <section>
+            <h2>Image Formats in Web Development</h2>
+            <p>Common image formats used in web development include:</p>
+            <ul>
+                <li><strong>JPG:</strong> Best for photographs and realistic images with smooth gradients. It uses lossy compression leading to smaller file sizes but may result in quality loss.</li>
+                <li><strong>GIF:</strong> Limited to 256 colors and therefore best for simple graphics. It supports animations.</li>
+                <li><strong>PNG:</strong> Supports transparency and is great for high-quality graphics. PNG-8 is similar to GIF, whereas PNG-24 has better color support similar to JPG.</li>
+                <li><strong>WEBP:</strong> A modern format that provides excellent compression and quality characteristics, often outperforming both JPG and PNG.</li>
+                <li><strong>SVG:</strong> An XML-based vector image format that scales well for high-resolution displays and is ideal for logos and icons.</li>
+            </ul>
+</section>
+ <section>
+            <h2>Screenshot Inclusion</h2>
+            <img src="1.jpg" alt="Screenshot Example" style="float:right; margin: 0 0 10px 10px; max-width: 100%;">
+        </section>
+<section>
+            <h3>Background Experimentation</h3>
+            <p class="bg-hex">aaaaaaaaaaa</p>
+            <p class="bg-colorname">bbbbbbbbbb</p>
+            <p class="bg-rgba">cccccccccccc</p>
+            <p class="bg-gradient">dddddddddddd</p>
+            <p class="bg-repeating-gradient">eeeeeeeeeeeeeeee</p>
+            <p class="bg-image">fffffffffffffff</p>
+            <p class="bg-multiple-images">gggggggggggg</p>
+        </section>
+
+    </article>
+</main>
+
+</body>
+</html>
