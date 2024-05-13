@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+// Defining a function called calculate that takes in three parameters: num1, operator, num2
+// Using a do-while loop to prompt the user to enter numbers and an operator, perform 
+function calculate(num1, operator, num2) {
+    switch(operator) {         
+case '+':
+            return num1 + num2;        
+ case '-':
+            return num1 - num2;        
+ case '*':
+            return num1 * num2;        
+ case '/':           
+  if(num2 != 0) {              
+   return num1 / num2;
+            } else {
+                return "Error: Division by zero is not allowed.";        
+     }    
+     default:            
+ return "Error: Invalid operator.";
+    }
+}
+function performCalculation() {
+    var num1 = parseFloat(document.getElementById('number1').value);    
+ var operator = document.getElementById('operator').value;
+    var num2 = parseFloat(document.getElementById('number2').value);     
+var result = calculate(num1, operator, num2);
+    document.getElementById('result').value = "The result is: " + result; }
+
+let currentSlide = 0;
+showSlide(currentSlide);
+
+function changeSlide(n) {
+  showSlide(currentSlide += n);
+}
+
+function showSlide(n) {
+  let slides = document.getElementsByClassName("slide");
+  if (n > slides.length - 1) currentSlide = 0;
+  if (n < 0) currentSlide = slides.length - 1;
+  for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  slides[currentSlide].style.display = "block";
+}
+
+</script>
+<style>
+form {
+    margin: 20px;
+}
+label, input, select, output {
+    display: block;
+    margin-top: 10px;
+}
+button {
+    margin-top: 20px;
+}
+
+.slider-container {
+  position: relative;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.slide {
+  display: none;
+  padding: 20px;
+  text-align: left;
+  background-color: #f1f1f1;
+}
+
+.slide.active {
+  display: block;
+}
+
+/* Styling for navigation buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+</style>
+</head>
+<body>
+    <form>
+        <label for="number1">Enter the first number:</label>
+        <input type="number" id="number1" value="0">
+
+        <label for="operator">Choose an operator:</label>
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*"></option>
+            <option value="/">/</option>
+        </select>
+
+        <label for="number2">Enter the second number:</label>
+        <input type="number" id="number2" value="0">
+
+        <button type="button" onclick="performCalculation()">Calculate</button>
+        <button type="reset">Reset</button>
+<label for="result">Result:</label>
+        <output id="result"></output>
+    </form>
+
+<div class="slider-container">
+  <div class="slide active">
+    <h2>Explain “repaint” and “reflow” of the webpage.</h2>
+    <p>Repaint occurs when changes are made to an element's visual styles that do not affect its layout on the page, such as color or visibility. Reflow, also known as layout, happens when there is a change in the layout due to alterations in the DOM that affect the size or position of elements, which requires the browser to re-calculate layout, causing further repaints for affected elements.</p>
+  </div>
+  <div class="slide">
+    <h2>How does JavaScript on the webpage affect the page load speed and performance?</h2>
+    <p>JavaScript can affect page load speed and performance as it is a blocking resource; when the browser encounters a script it must stop and execute it before it can continue parsing the HTML. Heavy JavaScript can delay the time to interactive, and inefficient code can lead to poor performance post-load due to increased memory and CPU usage.</p>
+  </div>
+  <div class="slide">
+    <h2>What is “minification” of the script? Why it is useful to minify your scripts?</h2>
+    <p>Minification is the process of removing unnecessary characters from the code (like whitespace, comments, etc.) without changing its functionality. It is useful because it reduces the size of the script, which decreases load times and bandwidth usage, thus improving the website's performance.</p>
+  </div>
+  <div class="slide">
+    <h2>What is a JS Web Worker and when do we need it?</h2>
+    <p>A JS Web Worker is a JavaScript script that runs in the background, in its own thread, without affecting the performance of the page. We need it for performing heavy tasks without interrupting the user interface, thereby improving the user experience on complex web applications.</p>
+  </div>
+  <div class="slide">
+    <h2>Sources</h2>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/Performance/Critical_rendering_path">MDN Web Docs: Critical Rendering Path</a></li>
+      <li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/javascript-startup-optimization">Google Developers: JavaScript Startup Optimization</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Encoding">MDN Web Docs: Minification</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">MDN Web Docs: Using Web Workers</a></li>
+    </ul>
+  </div>
+
+  <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+  <a class="next" onclick="changeSlide(1)">&#10095;</a>
+</div>
+
+
+</body>
+</html>
