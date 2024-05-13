@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Flexbox News Layout</title>
+</head>
+<body>
+<style>
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-news {
+    display: flex;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.top-news-image {
+    flex-basis: 30%;
+    margin-right: 20px;
+}
+
+.top-news-content {
+    flex-basis: 40%;
+}
+
+.news-section {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-item {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.news-thumbnail {
+            float: left;
+            max-width: 400px;
+            margin-left: 20px;
+}
+
+.sidebar {
+    flex: 1;
+    padding: 20px;
+    background-color: #eaeaea;
+}
+
+.sidebar-nav ul {
+    list-style-type: none;
+}
+
+.sidebar-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+
+</style>
+    <section class="top-news">
+        <img src="6.png" alt="The main image of the news" class="top-news-image">
+        <div class="top-news-content">
+            <h1>aaaaaaaaaaaaaaaaaaaa</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            <button class="btn">Read more</button>
+        </div>
+    </section>
+    
+
+        <section class="news-section">
+            <article class="news-item">
+                <img src="7.png" alt="Thumbnail of the news" class="news-thumbnail" >
+                <h2>News 1</h2>
+                <p class="news-meta">12.12.2012</p>
+                <p class="news-excerpt">zsfnsnj dfhnfxb</p>
+                <button class="btn">Read more</button>
+            </article>
+            
+        </section>
+
+        <section class="news-section">
+            <article class="news-item">
+                <img src="7.png" alt="Thumbnail of the news" class="news-thumbnail" >
+                <h2>News 2</h2>
+                <p class="news-meta">12.12.2012</p>
+                <p class="news-excerpt">zsfnsnj dfhnfxb</p>
+                <button class="btn">Read more</button>
+            </article>
+            
+        </section>        
+ 
+        <section class="news-section">
+            <article class="news-item">
+                <img src="7.png" alt="Thumbnail of the news" class="news-thumbnail" >
+                <h2>News 3</h2>
+                <p class="news-meta">12.12.2012</p>
+                <p class="news-excerpt">zsfnsnj dfhnfxb</p>
+                <button class="btn">Read more</button>
+            </article>
+            
+        </section>
+
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <ul class="nav-list">
+                    <li><a href="#">Create new account</a></li>
+                    <li><a href="#">Request new password</a></li>
+                    <li><a href="#">Forums</a></li>
+                    <li><a href="#">Resent content</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+
+</body>
+</html>
